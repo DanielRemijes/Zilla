@@ -91,7 +91,7 @@ export default function Home() {
             className="animate-fade-up mt-5 max-w-2xl font-display text-5xl leading-[1.12] text-paper sm:text-6xl md:text-7xl"
             style={{ animationDelay: "0.08s" }}
           >
-            Experiencing India,{" "}
+            Experience India,{" "}
             <span className="italic text-sand">district by district.</span>
           </h1>
           <p
