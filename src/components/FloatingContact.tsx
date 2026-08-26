@@ -1,23 +1,69 @@
-const WHATSAPP_NUMBER = "910000000000"; // TODO: replace with Zilla's real WhatsApp number (country code + number, no + or spaces)
-const PHONE_NUMBER = "+91 00000 00000"; // TODO: replace with Zilla's real call number
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
+const WHATSAPP_NUMBER = "919940028839";
+const PHONE_NUMBER = "+91 99400 28839";
 
 export default function FloatingContact() {
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [showNumber, setShowNumber] = useState(false);
+  const phoneWrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setIsTouchDevice(window.matchMedia("(pointer: coarse)").matches);
+  }, []);
+
+  useEffect(() => {
+    function handleOutsideClick(e: MouseEvent) {
+      if (
+        phoneWrapperRef.current &&
+        !phoneWrapperRef.current.contains(e.target as Node)
+      ) {
+        setShowNumber(false);
+      }
+    }
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, []);
+
+  const handlePhoneClick = () => {
+    if (isTouchDevice) {
+      window.location.href = `tel:${PHONE_NUMBER.replace(/\s/g, "")}`;
+      return;
+    }
+    setShowNumber((prev) => !prev);
+  };
+
   return (
     <div className="fixed bottom-6 right-5 z-50 flex flex-col items-end gap-3 sm:bottom-8 sm:right-8">
-      <a
-        href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`}
-        aria-label="Call Zilla"
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-coral text-ink shadow-lg shadow-ink/20 ring-1 ring-paper/10 transition-transform hover:scale-105"
-      >
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.6c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </a>
+      <div ref={phoneWrapperRef} className="relative flex items-center">
+        {showNumber && (
+          <a
+            href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`}
+            className="absolute right-full mr-3 whitespace-nowrap rounded-full bg-ink px-4 py-2.5 text-sm font-medium text-paper shadow-lg ring-1 ring-paper/10 transition-colors hover:text-coral"
+          >
+            {PHONE_NUMBER}
+          </a>
+        )}
+        <button
+          type="button"
+          onClick={handlePhoneClick}
+          aria-label="Call Zilla"
+          aria-expanded={!isTouchDevice && showNumber}
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-coral text-ink shadow-lg shadow-ink/20 ring-1 ring-paper/10 transition-transform hover:scale-105"
+        >
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.6c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
       <a
         href={`https://wa.me/${WHATSAPP_NUMBER}`}
         target="_blank"

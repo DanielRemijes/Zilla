@@ -81,7 +81,7 @@ export default function Home() {
         <img
           src="/images/home_page_hero_banner.jpg"
           alt="Landscape view of one of Zilla's districts"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover object-[30%_center] sm:object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/30 to-ink/10" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink/45 via-transparent to-transparent" />
@@ -112,7 +112,7 @@ export default function Home() {
             </Link>
             <Link
               href="/about"
-              className="rounded-full border border-paper/100 px-7 py-3.5 text-sm font-semibold text-paper/90 transition-colors hover:bg-paper hover:text-ink"
+              className="rounded-full border border-paper/30 bg-paper/10 px-7 py-3.5 text-sm font-semibold text-paper backdrop-blur-sm transition-colors hover:bg-paper hover:text-ink"
             >
               Why Zilla
             </Link>
@@ -214,7 +214,7 @@ export default function Home() {
       <section className="bg-paper">
         <div className="mx-auto max-w-7xl px-6 py-20 sm:px-10 sm:py-24">
           <div className="grid gap-12 md:grid-cols-2 md:items-start md:gap-16">
-            <div className="relative h-[600px] w-full w-full overflow-hidden rounded-2xl bg-ink-soft">
+            <div className="relative h-[350px] sm:h-[600px] w-full w-full overflow-hidden rounded-2xl bg-ink-soft">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/about.jpg"
@@ -277,7 +277,7 @@ export default function Home() {
             </Link>
             <Link
               href="#destinations"
-              className="rounded-full border border-white px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-paper hover:text-ink"
+              className="rounded-full border border-paper/30 bg-paper/10 px-7 py-3.5 text-sm font-semibold text-paper backdrop-blur-xs transition-colors hover:bg-paper hover:text-ink"
             >
               See destinations
             </Link>

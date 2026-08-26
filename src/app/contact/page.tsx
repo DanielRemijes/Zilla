@@ -3,8 +3,7 @@
 import { useState } from "react";
 
 const WHATSAPP_NUMBER = "919940028839";
-const WHATSAPP_MESSAGE_GENERAL =
-  "Hi Zilla! I'd like to know more about your trips.";
+const WHATSAPP_MESSAGE_GENERAL = "Hi Zilla! I'd like to know more about your trips.";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
@@ -93,8 +92,8 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wide text-ink/45">Phone</p>
-                  <a href="tel:+910000000000" className="text-base font-medium text-ink hover:text-coral-dark">
-                    +91 00000 00000
+                  <a href="tel:+919940028839" className="text-base font-medium text-ink hover:text-coral-dark">
+                    +91 99400 28839
                   </a>
                 </div>
               </li>
