@@ -106,7 +106,7 @@ export default function Home() {
   return (
     <>
       {/* ---------- HERO ---------- */}
-      <section className="relative h-[100svh] min-h-[520px] w-full overflow-hidden bg-ink">
+      <section className="relative h-[85svh] min-h-[520px] w-full overflow-hidden bg-ink">
         {heroImage && (
           /* eslint-disable-next-line @next/next/no-img-element */
           <img
