@@ -58,34 +58,21 @@ export default function AboutPage() {
             <p>
               The idea of Zilla began with a question:{" "}
               <em className="text-ink">
-                what if we could explore India more mindfully - in a way that
-                uplifts the places we visit, instead of overwhelming them?
+                 India is a vast land with a rich past, diverse cultures and varied geography, so why is it that most people only travel to a few places in each state? Surely there must be much more beyond the beloved destinations our footsteps often return to. Couldn't we pick any district in the country and build a memorable travel plan for it?
               </em>
             </p>
             <p>
-              As more of us take time to travel, our footsteps often return
-              to the same beloved destinations - Goa, Ooty, Coorg. Beautiful,
-              yes - but increasingly burdened by the weight of routine, ease,
-              and repetition.
+              That's how we chose the name - zilla! Beyond the familiar places lies a quieter world - of districts rarely spoken of, stories waiting to be heard, and landscapes untouched by the crowds. Zilla was created to help travelers (re)discover these overlooked places and their stories.
             </p>
             <p>
-              Yet India is vast. Beyond the usual lies a quieter world - of
-              districts rarely spoken of, stories waiting to be heard, and
-              landscapes untouched by the crowds.
-            </p>
-            <p>
-              Zilla was created to help travelers rediscover these
-              overlooked regions - and, at times, revisit the familiar, but
-              with fresh eyes and deeper care. We travel slower, in smaller
-              groups, led by local voices. Less extraction. More connection.
+              We help you see India - all of it! And no, we haven't dropped the popular places; with zilla you can visit those too, but with with fresh eyes and deeper care. We travel slower, in smaller groups, led by local voices. Less extraction. More interaction.
             </p>
           </div>
 
           <div className="flex items-start md:items-center">
             <blockquote className="border-l-2 border-coral pl-6 sm:pl-8">
               <p className="font-display text-2xl italic leading-snug text-ink sm:text-3xl">
-                &ldquo;The idea was never just to move people - but to move
-                them toward something better.&rdquo;
+                &ldquo;The idea was never just to move people - but to move them toward something more complete, and therefore better.&rdquo;
               </p>
             </blockquote>
           </div>

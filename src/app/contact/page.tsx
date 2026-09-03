@@ -57,10 +57,6 @@ export default function ContactPage() {
           <h1 className="mt-5 max-w-xl font-display text-4xl leading-[1.15] text-paper sm:text-5xl">
             Tell us where you want to go.
           </h1>
-          <p className="mt-5 max-w-md text-base leading-relaxed text-paper/70">
-            WhatsApp is the fastest way to reach us — or use the details
-            below.
-          </p>
         </div>
       </section>
 
