@@ -162,7 +162,7 @@ export default function Home() {
               Where we go
             </p>
             <h2 className="mt-4 font-display text-3xl leading-tight text-ink sm:text-4xl lg:text-5xl">
-              Four districts now, <br /> 100 more to go.
+              Four districts now, <br /> many more to come.
             </h2>
           </div>
 
