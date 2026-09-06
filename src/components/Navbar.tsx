@@ -7,7 +7,7 @@ import { useState } from "react";
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/#destinations", label: "Destinations" },
+  { href: "/destinations", label: "Destinations" },
   { href: "#", label: "School Trips" }, // TODO: point to real page once built
 ];
 
